@@ -10,7 +10,7 @@ import UIKit
 
 class GameScoreboardEditorViewModelFromGame: NSObject, GameScoreboardEditorViewModel {
     
-    let game: Game
+    var game: Game
     
     struct Formatter {
         static let durationFormatter: DateComponentsFormatter = {
@@ -27,8 +27,8 @@ class GameScoreboardEditorViewModelFromGame: NSObject, GameScoreboardEditorViewM
     var isFinished: Dynamic<Bool>
     var isPaused: Dynamic<Bool>
     
-    let homePlayers: [PlayerScoreboardMoveEditorViewModel]
-    let awayPlayers: [PlayerScoreboardMoveEditorViewModel]
+    var homePlayers: [PlayerScoreboardMoveEditorViewModel]
+    var awayPlayers: [PlayerScoreboardMoveEditorViewModel]
     
     func togglePause() {
         if isPaused.value {
